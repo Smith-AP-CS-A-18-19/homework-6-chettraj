@@ -3,22 +3,45 @@ public class Homework6 {
 	/* Finish the constructor and create any necessary instance
 	 * variables
 	 */
+	private String statement;
+	private int unos;
+	private int dos;
+	static int tres;
+
 	public Homework6(String s, int a, int b, int c) {
+		statement = s;
+		unos = a;
+		dos = b;
+		tres = c;
 
 	}
 
 	/* Return true if the stored String comes before the provided
 	 * String lexicographically, return false if it does not
 	 */
-	public boolen isBefore(String other) {
+	public boolean isBefore(String other) {
+		if (statement.compareTo(other) > 0){
+			return true;
+		}
+		else {
+			return false;
+		}
 
 	}
 
 	/* Return the maximum of the stored integers
 	 */
 	public int max() {
-
-	}
+		if (unos >= dos && dos >= tres){
+			return unos;
+		}
+		else if (unos >= dos && tres >= unos){
+			return tres;
+			}
+		else{
+			return dos;
+			}
+		}
 
 	/* Return the middle value of the stored integers. If two numbers
 	 * have the same value, return the lowest value. If all three numbers
@@ -26,8 +49,14 @@ public class Homework6 {
 	 * to receive full credit
 	 */
 	public int mid() {
-
+		if (tres == unos){
+			return unos;
+		}
+		else{
+			return dos;
+		}
 	}
+// i gave up :( //
 
 	/* Return true if the stored numbers were provided in ascending
 	 * order. They are considered ascending if each number is greater
@@ -35,6 +64,13 @@ public class Homework6 {
 	 * >= or =<; instead use < or > and invert them with !
 	 */
 	public boolean isAscending() {
+		String llo = unos + " " + dos + " " + tres;
+		if (!(unos > dos) && !(dos > tres)){
+			return true;
+		}
+		else{
+			return false;
+		}
 
 	}
 
@@ -87,5 +123,5 @@ public class Homework6 {
 
 		System.exit(exitCode);
 	}
-	
+
 }
