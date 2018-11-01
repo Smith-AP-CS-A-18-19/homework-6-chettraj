@@ -20,6 +20,10 @@ public class Homework6 {
 	 * String lexicographically, return false if it does not
 	 */
 	public boolean isBefore(String other) {
+		/* compareTo will return a negative
+		 * number if the first string comes
+		 * before
+		 */
 		if (statement.compareTo(other) > 0){
 			return true;
 		}
@@ -49,6 +53,9 @@ public class Homework6 {
 	 * to receive full credit
 	 */
 	public int mid() {
+		/* There are a lot of different conditions that
+		 * you need to check
+		 */
 		if (tres == unos){
 			return unos;
 		}
